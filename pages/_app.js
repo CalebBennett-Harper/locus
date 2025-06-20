@@ -11,24 +11,30 @@ export default function App({ Component, pageProps }) {
         <meta name="description" content="The point where ambitious paths converge. Curated social infrastructure for Gen Z professionals who move between cities." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
+        {/* Basic meta for link previews */}
+        <meta name="image" content="/og-image.png" />
+        
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://locus.fyi/" />
         <meta property="og:title" content="LOCUS - Join the Waitlist" />
         <meta property="og:description" content="The point where ambitious paths converge. Curated social infrastructure for Gen Z professionals who move between cities." />
-        <meta property="og:image" content="https://locus.fyi/og-image.png" />
+        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="LOCUS - Mathematical convergence design" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://locus.fyi/" />
         <meta property="twitter:title" content="LOCUS - Join the Waitlist" />
         <meta property="twitter:description" content="The point where ambitious paths converge. Curated social infrastructure for Gen Z professionals who move between cities." />
-        <meta property="twitter:image" content="https://locus.fyi/og-image.png" />
+        <meta property="twitter:image" content="/og-image.png" />
         
         {/* Favicons */}
-        <link rel="icon" href="/og-image.png" type="image/png" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon.svg" sizes="any" />
         <link rel="apple-touch-icon" href="/og-image.png" sizes="180x180" />
         
         {/* iOS Web App */}
