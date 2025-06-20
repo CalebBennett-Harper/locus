@@ -249,23 +249,31 @@ export default function LandingPage() {
           </form>
         </div>
         
-        <div className="admin-footer-link" style={{ marginBottom: '8px' }}>
-          <a 
-            href="https://www.linkedin.com/company/locus-fyi/about/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            Network.connect() → LinkedIn
-          </a>
-        </div>
-
-        <div className="footer-note" style={{ marginBottom: '16px' }}>
+        <div className="footer-note">
           Selected candidates will receive access details<br />
           and convergence point information directly
         </div>
 
         <div className="admin-footer-link">
           <a href="/admin/login">System Access</a>
+        </div>
+
+        <div style={{ textAlign: 'center', marginTop: '24px', opacity: 0.4 }}>
+          <a 
+            href="https://www.linkedin.com/company/locus-fyi/about/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ 
+              color: '#666666', 
+              textDecoration: 'none',
+              fontSize: '20px',
+              transition: 'opacity 0.2s ease'
+            }}
+            onMouseEnter={(e) => e.target.style.opacity = '0.8'}
+            onMouseLeave={(e) => e.target.style.opacity = '0.4'}
+          >
+            in
+          </a>
         </div>
       </div>
     </>
