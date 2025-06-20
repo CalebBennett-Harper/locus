@@ -258,23 +258,13 @@ export default function LandingPage() {
           <a href="/admin/login">System Access</a>
         </div>
 
-        <div style={{ textAlign: 'center', marginTop: '24px', opacity: 0.4 }}>
+        <div className="admin-footer-link" style={{ marginTop: '16px' }}>
           <a 
             href="https://www.linkedin.com/company/locus-fyi/about/" 
             target="_blank" 
             rel="noopener noreferrer"
-            style={{ 
-              color: '#666666', 
-              textDecoration: 'none',
-              fontSize: '14px',
-              fontFamily: 'JetBrains Mono, monospace',
-              letterSpacing: '1px',
-              transition: 'opacity 0.2s ease'
-            }}
-            onMouseEnter={(e) => e.target.style.opacity = '0.8'}
-            onMouseLeave={(e) => e.target.style.opacity = '0.4'}
           >
-            [linkedin]
+            LinkedIn
           </a>
         </div>
       </div>
