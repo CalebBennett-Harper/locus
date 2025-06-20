@@ -39,11 +39,16 @@ export default async function handler(req, res) {
     const resend = new Resend(process.env.RESEND_API_KEY)
     
     const emailResult = await resend.emails.send({
-      from: 'Locus <noreply@resend.dev>', // Using Resend's test domain for now
+      from: 'Locus <hello@locus.fyi>', // Using your domain for better deliverability
       to: email,
       subject: subject,
       html: htmlContent,
       text: textContent,
+      headers: {
+        'X-Entity-ID': 'locus-waitlist-confirmation',
+        'X-Priority': '3',
+        'Reply-To': 'hello@locus.fyi'
+      }
     })
 
     console.log('✅ Email sent successfully:', emailResult)
