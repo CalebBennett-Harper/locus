@@ -249,7 +249,7 @@ export default function LandingPage() {
           </form>
         </div>
         
-        <div className="admin-footer-link" style={{ marginBottom: '16px' }}>
+        <div className="admin-footer-link" style={{ marginBottom: '8px' }}>
           <a 
             href="https://www.linkedin.com/company/locus-fyi/about/" 
             target="_blank" 
