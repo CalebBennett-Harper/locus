@@ -254,17 +254,15 @@ export default function LandingPage() {
           and convergence point information directly
         </div>
 
-        <div className="admin-footer-link">
+        <div className="admin-footer-link" style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginTop: '32px' }}>
           <a href="/admin/login">System Access</a>
-        </div>
-
-        <div className="admin-footer-link" style={{ marginTop: '32px' }}>
+          <span style={{ color: '#333333' }}>|</span>
           <a 
             href="https://www.linkedin.com/company/locus-fyi/about/" 
             target="_blank" 
             rel="noopener noreferrer"
           >
-            [Linkedin]
+            LinkedIn
           </a>
         </div>
       </div>
