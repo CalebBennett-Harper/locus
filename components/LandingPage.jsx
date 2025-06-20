@@ -266,13 +266,15 @@ export default function LandingPage() {
             style={{ 
               color: '#666666', 
               textDecoration: 'none',
-              fontSize: '20px',
+              fontSize: '14px',
+              fontFamily: 'JetBrains Mono, monospace',
+              letterSpacing: '1px',
               transition: 'opacity 0.2s ease'
             }}
             onMouseEnter={(e) => e.target.style.opacity = '0.8'}
             onMouseLeave={(e) => e.target.style.opacity = '0.4'}
           >
-            in
+            [linkedin]
           </a>
         </div>
       </div>
