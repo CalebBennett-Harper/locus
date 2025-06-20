@@ -254,15 +254,61 @@ export default function LandingPage() {
           and convergence point information directly
         </div>
 
-        <div className="admin-footer-link" style={{ display: 'flex', justifyContent: 'center', gap: '24px', marginTop: '32px' }}>
-          <a href="/admin/login">System Access</a>
+        <div style={{ 
+          fontFamily: 'JetBrains Mono, monospace',
+          fontSize: '0.7rem',
+          color: '#444444',
+          textAlign: 'center',
+          lineHeight: 1.4,
+          marginTop: '32px',
+          paddingBottom: '20px',
+          display: 'flex', 
+          justifyContent: 'center', 
+          gap: '24px'
+        }}>
+          <a 
+            href="/admin/login"
+            style={{ 
+              color: '#444444', 
+              textDecoration: 'none', 
+              transition: 'color 0.3s ease',
+              fontStyle: 'normal',
+              whiteSpace: 'nowrap'
+            }}
+            onMouseEnter={(e) => e.target.style.color = '#777'}
+            onMouseLeave={(e) => e.target.style.color = '#444444'}
+          >
+            System Access
+          </a>
           <span style={{ color: '#333333' }}>|</span>
           <a 
             href="https://www.linkedin.com/company/locus-fyi/about/" 
             target="_blank" 
             rel="noopener noreferrer"
+            style={{ 
+              color: '#444444', 
+              textDecoration: 'none', 
+              transition: 'color 0.3s ease',
+              fontStyle: 'normal'
+            }}
+            onMouseEnter={(e) => e.target.style.color = '#777'}
+            onMouseLeave={(e) => e.target.style.color = '#444444'}
           >
             LinkedIn
+          </a>
+          <span style={{ color: '#333333' }}>|</span>
+          <a 
+            href="mailto:hello@locus.fyi"
+            style={{ 
+              color: '#444444', 
+              textDecoration: 'none', 
+              transition: 'color 0.3s ease',
+              fontStyle: 'normal'
+            }}
+            onMouseEnter={(e) => e.target.style.color = '#777'}
+            onMouseLeave={(e) => e.target.style.color = '#444444'}
+          >
+            hello@locus.fyi
           </a>
         </div>
       </div>
