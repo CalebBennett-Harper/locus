@@ -249,12 +249,7 @@ export default function LandingPage() {
           </form>
         </div>
         
-        <div className="footer-note">
-          Selected candidates will receive access details<br />
-          and convergence point information directly
-        </div>
-
-        <div className="admin-footer-link" style={{ marginBottom: '8px' }}>
+        <div className="admin-footer-link" style={{ marginBottom: '16px' }}>
           <a 
             href="https://www.linkedin.com/company/locus-fyi/about/" 
             target="_blank" 
@@ -262,6 +257,11 @@ export default function LandingPage() {
           >
             Network.connect() → LinkedIn
           </a>
+        </div>
+
+        <div className="footer-note" style={{ marginBottom: '16px' }}>
+          Selected candidates will receive access details<br />
+          and convergence point information directly
         </div>
 
         <div className="admin-footer-link">
