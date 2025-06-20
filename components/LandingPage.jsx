@@ -258,13 +258,13 @@ export default function LandingPage() {
           <a href="/admin/login">System Access</a>
         </div>
 
-        <div className="admin-footer-link" style={{ marginTop: '16px' }}>
+        <div className="admin-footer-link" style={{ marginTop: '32px' }}>
           <a 
             href="https://www.linkedin.com/company/locus-fyi/about/" 
             target="_blank" 
             rel="noopener noreferrer"
           >
-            LinkedIn
+            [Linkedin]
           </a>
         </div>
       </div>
