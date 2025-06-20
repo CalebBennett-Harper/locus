@@ -254,17 +254,11 @@ export default function LandingPage() {
           and convergence point information directly
         </div>
 
-        <div style={{ textAlign: 'center', margin: '16px 0', fontSize: '0.75rem', color: '#666666' }}>
+        <div className="admin-footer-link" style={{ marginBottom: '8px' }}>
           <a 
             href="https://www.linkedin.com/company/locus-fyi/about/" 
             target="_blank" 
             rel="noopener noreferrer"
-            style={{ 
-              color: '#888888', 
-              textDecoration: 'none',
-              fontFamily: 'JetBrains Mono, monospace',
-              letterSpacing: '0.5px'
-            }}
           >
             Network.connect() → LinkedIn
           </a>
