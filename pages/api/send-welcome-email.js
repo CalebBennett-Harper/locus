@@ -1,4 +1,5 @@
 import { emailService } from '../../lib/emailService'
+import { Resend } from 'resend'
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -15,11 +16,9 @@ export default async function handler(req, res) {
     // Generate email content
     const { subject, htmlContent, textContent } = emailService.generateWelcomeEmailContent(name, cities)
 
-    // For dev, log the email content
-    // In prod, integrate with an email service like Resend, SendGrid, etc
-    
+    // In development, just log the email
     if (process.env.NODE_ENV === 'development') {
-      console.log('📧 EMAIL WOULD BE SENT:')
+      console.log('📧 EMAIL WOULD BE SENT (Dev Mode):')
       console.log('To:', email)
       console.log('Subject:', subject)
       console.log('Content:', textContent)
@@ -31,36 +30,36 @@ export default async function handler(req, res) {
       })
     }
 
-    // Production email sending (uncomment and configure when ready)
-    /*
-    // Example with Resend (install: npm install resend)
-    const { Resend } = require('resend')
+    // Production: Use Resend to actually send the email
+    if (!process.env.RESEND_API_KEY) {
+      console.error('RESEND_API_KEY not configured')
+      return res.status(500).json({ error: 'Email service not configured' })
+    }
+
     const resend = new Resend(process.env.RESEND_API_KEY)
     
     const emailResult = await resend.emails.send({
-      from: 'convergence@locus.app', // Your verified domain
+      from: 'Locus <noreply@resend.dev>', // Using Resend's test domain for now
       to: email,
       subject: subject,
       html: htmlContent,
       text: textContent,
     })
-    
+
+    console.log('✅ Email sent successfully:', emailResult)
+
     return res.status(200).json({ 
       success: true, 
       message: 'Welcome email sent successfully',
-      emailId: emailResult.id 
-    })
-    */
-
-    // For now, return success without actually sending
-    return res.status(200).json({ 
-      success: true, 
-      message: 'Email service not configured for production yet',
-      email: { to: email, subject }
+      email: {
+        to: email,
+        subject: subject,
+        id: emailResult.data?.id
+      }
     })
 
   } catch (error) {
-    console.error('Error sending welcome email:', error)
+    console.error('❌ Email sending error:', error)
     return res.status(500).json({ 
       error: 'Failed to send welcome email',
       details: error.message 
